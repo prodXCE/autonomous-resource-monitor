@@ -1,0 +1,16 @@
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+
+# Build artifacts
+**/target/
+**/dist/
+**/node_modules/
+
+# Python virtual environment
+venv/
+__pycache__/
+
+
