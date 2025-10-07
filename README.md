@@ -1,4 +1,4 @@
-## **Autonomous Resource Optimizer (ARO)**
+## **Autonomous Resource Monitor **
 
 An **autonomous, self-aware infrastructure management platform** designed to monitor system metrics, detect anomalies using statistical analysis, and provide **real-time operational insights** via a professional monitoring stack.
 
@@ -147,5 +147,6 @@ sudo podman logs -f aro-ml-worker
 ```
 
 Within 60 seconds, you should see log entries highlighting the **anomaly detection event**.
+
 
 
