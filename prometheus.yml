@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'aro-backend'
+
+    metrics_path: /actuator/prometheus
+    
+    static_configs:
+      - targets: ['aro-backend-app:8080']

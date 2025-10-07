@@ -1,20 +1,21 @@
-FROM maven:3.8.5-openjdk-21 AS build
+FROM eclipse-temurin:21-jdk-jammy AS build
 
 WORKDIR /app
 
-COPY pom.xml .
+COPY . .
 
-COPY src ./src 
+RUN chmod +x mvnw
 
-RUN mvn clean install -DskipTests
+RUN ./mvnw clean install -DskipTests
 
-FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jre-jammy
 
-WORKDIR /app 
+WORKDIR /app
 
-COPY --from=build /app/target/*.jar app.jar 
+COPY --from=build /app/target/*.jar app.jar
 
-EXPOSE 8080 
+EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
 

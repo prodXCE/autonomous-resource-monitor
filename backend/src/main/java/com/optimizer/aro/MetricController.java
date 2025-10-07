@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.Instant;
 @RestController
-@RequestMapping("/metric")
+@RequestMapping("/api/metrics")
 public class MetricController {
     private final MetricRepository metricRepository;
 

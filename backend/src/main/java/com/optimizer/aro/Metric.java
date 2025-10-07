@@ -13,7 +13,7 @@ public class Metric {
     private Long id;
 
     private String source;
-    private String type;
+    private String metricType;
     private double value;
     private Instant timestamp;
 
@@ -21,8 +21,8 @@ public class Metric {
     public void setId(Long id) { this.id = id; }
     public String getSource() { return source; }
     public void setSource(String source) { this.source = source; }
-    public String getType() { return type; }
-    public void setType(String type) { this.type = type; }
+    public String getMetricType() { return metricType; }
+    public void setMetricType(String metricType) { this.metricType = metricType; }
     public double getValue() { return value; }
     public void setValue(double value) { this.value = value; }
     public Instant getTimestamp() { return timestamp; }
